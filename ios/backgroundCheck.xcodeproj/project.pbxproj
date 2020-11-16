@@ -15,8 +15,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* backgroundCheckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* backgroundCheckTests.m */; };
-		454AA03A255AE22E00BA5BE3 /* BackgroundModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 454AA037255AE22E00BA5BE3 /* BackgroundModule.m */; };
-		454AA03B255AE22E00BA5BE3 /* APPMethodMagic.m in Sources */ = {isa = PBXBuildFile; fileRef = 454AA038255AE22E00BA5BE3 /* APPMethodMagic.m */; };
+		4599D6CD255BFF70005E22A1 /* beginBackgroundTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4599D6CC255BFF70005E22A1 /* beginBackgroundTask.m */; };
+		4599D6D3255BFFAE005E22A1 /* beginBackgroundTask.h in Sources */ = {isa = PBXBuildFile; fileRef = 4599D6D2255BFF88005E22A1 /* beginBackgroundTask.h */; };
 		4D33614ACAF190BF2A5B8C3F /* libPods-backgroundCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C44155764D52EC3E98CE52 /* libPods-backgroundCheck.a */; };
 		5A4EB7E87C3A582602374686 /* libPods-backgroundCheck-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2DC25A78D9BA42788A56E7 /* libPods-backgroundCheck-tvOS.a */; };
 		65ABB227F684B60A3DDBF724 /* libPods-backgroundCheck-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABBC374C48409DCA43E1150 /* libPods-backgroundCheck-tvOSTests.a */; };
@@ -59,10 +59,8 @@
 		2D02E47B1E0B4A5D006451C7 /* backgroundCheck-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "backgroundCheck-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* backgroundCheck-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "backgroundCheck-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3910826C92796CE17E4E2261 /* libPods-backgroundCheck-backgroundCheckTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-backgroundCheck-backgroundCheckTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		454AA036255AE22E00BA5BE3 /* BackgroundModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundModule.h; path = backgroundCheck/BackgroundModule.h; sourceTree = "<group>"; };
-		454AA037255AE22E00BA5BE3 /* BackgroundModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundModule.m; path = backgroundCheck/BackgroundModule.m; sourceTree = "<group>"; };
-		454AA038255AE22E00BA5BE3 /* APPMethodMagic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APPMethodMagic.m; path = backgroundCheck/APPMethodMagic.m; sourceTree = "<group>"; };
-		454AA039255AE22E00BA5BE3 /* APPMethodMagic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APPMethodMagic.h; path = backgroundCheck/APPMethodMagic.h; sourceTree = "<group>"; };
+		4599D6CC255BFF70005E22A1 /* beginBackgroundTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = beginBackgroundTask.m; sourceTree = "<group>"; };
+		4599D6D2255BFF88005E22A1 /* beginBackgroundTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = beginBackgroundTask.h; sourceTree = "<group>"; };
 		49192DBB6CFEF030AB2872F9 /* Pods-backgroundCheck-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-backgroundCheck-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-backgroundCheck-tvOSTests/Pods-backgroundCheck-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ABBC374C48409DCA43E1150 /* libPods-backgroundCheck-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-backgroundCheck-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C44155764D52EC3E98CE52 /* libPods-backgroundCheck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-backgroundCheck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,10 +129,6 @@
 		13B07FAE1A68108700A75B9A /* backgroundCheck */ = {
 			isa = PBXGroup;
 			children = (
-				454AA036255AE22E00BA5BE3 /* BackgroundModule.h */,
-				454AA037255AE22E00BA5BE3 /* BackgroundModule.m */,
-				454AA039255AE22E00BA5BE3 /* APPMethodMagic.h */,
-				454AA038255AE22E00BA5BE3 /* APPMethodMagic.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -142,6 +136,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				4599D6CC255BFF70005E22A1 /* beginBackgroundTask.m */,
+				4599D6D2255BFF88005E22A1 /* beginBackgroundTask.h */,
 			);
 			name = backgroundCheck;
 			sourceTree = "<group>";
@@ -303,6 +299,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 9F6UVZ397L;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -577,10 +574,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4599D6D3255BFFAE005E22A1 /* beginBackgroundTask.h in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				454AA03B255AE22E00BA5BE3 /* APPMethodMagic.m in Sources */,
-				454AA03A255AE22E00BA5BE3 /* BackgroundModule.m in Sources */,
+				4599D6CD255BFF70005E22A1 /* beginBackgroundTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9F6UVZ397L;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = backgroundCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -675,7 +673,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.thermofisher.blegateway;
 				PRODUCT_NAME = backgroundCheck;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -690,6 +688,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9F6UVZ397L;
 				INFOPLIST_FILE = backgroundCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -697,7 +696,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.epam.thermofisher.blegateway;
 				PRODUCT_NAME = backgroundCheck;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -15,8 +15,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-
-import BackgroundModule from './BackgroundModule';
+import { beginBackgroundTask, endBackgroundTask, backgroundTimeRemaining } from './beginBackgroundTask';
 
 import {
   Header,
@@ -31,23 +30,26 @@ const App: () => React$Node = () => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-
-    BackgroundModule.startCountdown();
     async function fetchMyAPI() {
+
+      const backgroundTaskId = await beginBackgroundTask();
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
   
       while(true) {
         countRef.current += 1;
+        const remaining = await backgroundTimeRemaining();
+        console.log(`count: ${countRef.current}, remaining:${remaining}`);
         setCount(countRef.current);
         await sleep(1000);
       }
+      await endBackgroundTask(backgroundTaskId);
     }  
     fetchMyAPI();
   }, []);
 
-  BackgroundModule.execute('enable', false, {});
+  // BackgroundModule.execute('enable', false, {});
 
   return (
     <>
